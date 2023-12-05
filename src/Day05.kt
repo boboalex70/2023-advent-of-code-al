@@ -2,6 +2,7 @@ data class Transform(val destStart: Long, val srcStart: Long, val length: Long)
 
 fun main() {
     fun part1(input: List<String>): Long {
+        //not optimal
         val seeds = input[0].split(":").last().split(" ").filter { it != "" }.map { it.toLong() }.toMutableList()
         val currentTransforms = mutableListOf<Transform>()
         var parseLine = 3
